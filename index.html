@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+    MDN 사이트 : CanvasRenderingContext2D 참고
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <title>PaintJS</title>
-
 </head>
+
 <body>
+    <!--css작업은 class로-->
+    <!--js작업은 id로-->
+    <canvas id="jsCanvas" class="canvas"></canvas>
+
+    <!--class 명칭은 같아도 됨.-->
+    <div class="controls">
+
+        <div class="controls_range">
+            <!--페인트 브러쉬 컨트롤(사이즈)-->
+            <input type="range" id="jsRange" min="0.1" max="10" value="2.5" step="0.1">
+            <!--range는 막대기 바 ui-->
+        </div>
+
+        <div class="controls_btns">
+            <button id="jsMode">Fill</button>
+            <button id="jsSave">Save</button>
+        </div>
+
+        <div class="controls_colors" id="jsColors">
+            <div class="jsColor" style="background-color: #2c2c2c;"></div>
+            <div class="jsColor" style="background-color: white;"></div>
+            <div class="jsColor" style="background-color: red;"></div>
+            <div class="jsColor" style="background-color: orange;"></div>
+            <div class="jsColor" style="background-color: yellow;"></div>
+            <div class="jsColor" style="background-color: green;"></div>
+            <div class="jsColor" style="background-color: skyblue;"></div>
+            <div class="jsColor" style="background-color: blue;"></div>
+            <div class="jsColor" style="background-color: violet;"></div>
+        </div>
+
+    </div>
+
     <script src="add.js"></script>
 </body>
+
 </html>
